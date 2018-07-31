@@ -7,7 +7,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <!-- 开启驼峰，开启后，只要数据库字段和对象属性名字母相同，无论中间加多少下划线都可以识别 -->
         <setting name="mapUnderscoreToCamelCase" value="true" />
     </settings>
-    <!-- 和spring整合后 environments配置将废除 -->
+     和spring整合后 environments配置将废除
     <environments default="development">
         <environment id="development">
             <!-- 使用jdbc事务管理 -->
@@ -24,7 +24,8 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
     </environments>
     <mappers>
-        <mapper resource="mybatis/Ip.xml"/>
+        <!--<mapper resource="mapper/IpMapper.xml"/>-->
+        <mapper resource="mybatis/mapper/IpMapper.xml"></mapper>
     </mappers>
 
 </configuration>

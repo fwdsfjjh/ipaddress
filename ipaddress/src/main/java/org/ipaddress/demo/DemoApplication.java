@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@ComponentScan(basePackages = {"org.ipaddress.demo.dao","org.ipaddress.demo.junit"})
+@ComponentScan(basePackages = {"org.ipaddress.demo"})
 public class DemoApplication {
 
     public static void main(String[] args) {

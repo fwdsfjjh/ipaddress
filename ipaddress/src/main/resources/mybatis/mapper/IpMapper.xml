@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="org.ipaddress.demo.dao.IpDao">
+    <!--<resultMap id="ip" type="org.ipAdresss.demo.dao.Ip" autoMapping="false">-->
+    <resultMap id="ip" type="org.ipadress.demo.pojo.Ip">
+        <id property="id" column="id"/>
+        <result property="ipAddress" column="ip_address"></result>
+        <result property="ipPort" column="ip_port"></result>
+        <result property="createTime" column="create_time"></result>
+        <result property="typeName" column="type_name"></result>
+        <result property="anonymity" column="anonymity"></result>
+        <result property="location" column="location"></result>
+        <result property="enable" column="enable"></result>
+        <result property="usedSuccess" column="used_success"></result>
+        <result property="responseSpeed" column="response_speed"></result>
+        <result property="checkTimes" column="check_times"></result>
+        <result property="lastCheck_time" column="last_check_time"></result>
+
+    </resultMap>
+    <select id="selectIpByIpAddress" parameterType="string" resultMap="ip">
+            select * from ip where ip_address = #{ipAddress}
+        </select>
+    <!--<select id="selectIpByLocation" parameterType="String" resultMap="org.ipaddress.demo.pojo.Ip">-->
+            <!--select * from ip where location like = "%"#{location}"%"-->
+        <!--</select>-->
+
+</mapper>
+
+

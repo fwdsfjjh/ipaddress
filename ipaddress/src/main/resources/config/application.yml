@@ -1,0 +1,19 @@
+sever:
+ port: 8080
+
+mybatis:
+  config-location:   classpath:mybatis/sqlMapConfig11.xml
+  mapper-locations:   classpath:mybatis/mapper/IpMapper.xml
+  check-config-location: true
+
+
+spring:
+ datasource:
+   password: root
+   username: root
+   url: jdbc:mysql://localhost:3306/ips?useSSL=false
+   driver-class-name: com.mysql.jdbc.Driver
+
+
+
+
